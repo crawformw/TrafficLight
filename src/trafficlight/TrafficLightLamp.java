@@ -3,6 +3,9 @@ package trafficlight;
 
 import javafx.scene.control.Button;
 
+/** TrafficLightLamp() 
+ * @author mikec
+ */
 public class TrafficLightLamp extends Button implements TrafficInterface
 {   
     private boolean isOn;
