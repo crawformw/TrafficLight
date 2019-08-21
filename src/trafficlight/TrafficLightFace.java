@@ -4,6 +4,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.VBox;
 
+/** TrafficLightFace()
+ * @author mikec
+ */
 public class TrafficLightFace extends VBox implements TrafficInterface
 {
     public TrafficLightLamp redLamp;
