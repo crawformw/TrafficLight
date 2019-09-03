@@ -30,7 +30,12 @@ public class TrafficLightFace extends VBox implements TrafficInterface
         setMaxHeight(170);
         setMaxWidth(50);
         setAlignment(Pos.CENTER);
-        setStyle("-fx-border-style: solid inside; -fx-border-width: 4; -fx-border-color: black; -fx-bofder-insets: 5;");
+        setStyle("-fx-border-style: solid inside; "
+                + "-fx-border-width: 4; "
+                + "-fx-border-color: black; "
+                + "-fx-bofder-insets: 5; -fx-border-radius: 10px;"
+                + "-fx-background-color: gray;"
+                + "-fx-background-radius: 10px; ");
         setPadding( new Insets(3, 3, 3, 3) );
         
         getChildren().addAll(redLamp, yellowLamp, greenLamp);
