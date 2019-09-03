@@ -18,6 +18,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/** class TrafficLight
+ * @author mikec
+ */
 public class TrafficLight extends Application implements TrafficInterface
 {
     private TrafficLightFace northFace;
@@ -101,7 +104,7 @@ public class TrafficLight extends Application implements TrafficInterface
         // this holds our start and stop buttons to activate the signal        
         buttonBox = new VBox(4);
         buttonBox.setAlignment(Pos.CENTER);
-        buttonBox.setStyle("-fx-background-color: gray;");
+        buttonBox.setStyle("-fx-background-color: gray; -fx-background-radius: 20px;");
         buttonBox.setPadding( new Insets(3, 3, 3, 3) );
         buttonBox.getChildren().addAll(frameCntLabel, startButton, stopButton, timeFields);
         
@@ -145,11 +148,10 @@ public class TrafficLight extends Application implements TrafficInterface
         
         frameString.set(String.valueOf(frameCnt));
         
-        if (frameCnt == sequence.get(0)) { trafficSequence(eastFace, YELLOW_ON); }          // cycle moves to Yellow on the EW signals - 300
-        if (frameCnt == sequence.get(1)) { trafficSequence(eastFace, RED_ON); }             // cycle moves to Red on the EW signals - 520
-        if (frameCnt == sequence.get(2)) { trafficSequence(northFace, YELLOW_ON); }         // cycle moves to Yellow on the NS signals - 820
-        if (frameCnt == sequence.get(3)) { trafficSequence(northFace, RED_ON); frameCnt = 0;}            // cycle moves to Red on the NS signals - 940
-        //if (frameCnt == sequence.get(4)) { frameCnt = 0; }                                 // cycle complete, set frameCnt back to 0 and start over - 1180                           
+        if (frameCnt == sequence.get(0)) { trafficSequence(eastFace, YELLOW_ON); }                  // cycle moves to Yellow on the EW signals
+        if (frameCnt == sequence.get(1)) { trafficSequence(eastFace, RED_ON); }                     // cycle moves to Red on the EW signals
+        if (frameCnt == sequence.get(2)) { trafficSequence(northFace, YELLOW_ON); }                 // cycle moves to Yellow on the NS signals
+        if (frameCnt == sequence.get(3)) { trafficSequence(northFace, RED_ON); frameCnt = 0;}       // cycle moves to Red on the NS signals                           
     }
     
     /** turnTrafficSignalOn() - called by our updateSignal() routine when the frameCnt hits a certain place, signaling a change in our traffic lights
