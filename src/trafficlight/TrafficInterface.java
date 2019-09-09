@@ -1,7 +1,16 @@
+/** Interface TrafficInterface
+ * 
+ */
 
 package trafficlight;
 
-/** @author mikec */
+/** Interface TrafficInterface
+ * @author mikec
+ * 
+ * Standard java Interface where we assign all our static/final variables used through the program.
+ * Each class would "implement" this interface in order to gain access to these variables, otherwise
+ * they would be required to fully qualify.
+ */
 public interface TrafficInterface 
 {
     public static final int RED = 0;

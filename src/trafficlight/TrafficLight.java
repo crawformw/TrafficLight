@@ -1,3 +1,6 @@
+/** Class TrafficLight
+ * 
+ */
 
 package trafficlight;
 

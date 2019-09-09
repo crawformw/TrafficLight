@@ -1,3 +1,6 @@
+/** Class TrafficLightLamp
+ * 
+ */
 
 package trafficlight;
 
@@ -5,6 +8,9 @@ import javafx.scene.control.Button;
 
 /** TrafficLightLamp() 
  * @author mikec
+ * 
+ * class to represent a "lamp" inside a traffic light "face"... extending the button class allows us to shape the image and 
+ * assign a color... the lamp object has six possible colors and is either on or off
  */
 public class TrafficLightLamp extends Button implements TrafficInterface
 {   

@@ -1,11 +1,18 @@
+/** Class TrafficLightFace
+ * 
+ */
+
 package trafficlight;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.VBox;
 
-/** TrafficLightFace()
+/** Class TrafficLightFace
  * @author mikec
+ * 
+ * Class used to represent a standard three color traffic light face.  We extend the FX VBox class to give us the vertical appearance
+ * of the standard traffic signal.  Also, implement the TrafficInterface so we have a set of common color variables and on/off indicators
  */
 public class TrafficLightFace extends VBox implements TrafficInterface
 {
