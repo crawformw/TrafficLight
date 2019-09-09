@@ -48,34 +48,41 @@ public class TrafficLightLamp extends Button implements TrafficInterface
     {
         switch(mode)
         {
-            case RED_ON:    
-                setStyle("-fx-background-color: red; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = true;
+            case RED_ON:
+                // set the style attributes for each of the light options, 40x40 px button with a 40 px radius gets us a circle
+                // this could be done in a CSS file and included, then we only reference the style name assigned... strictly programmer preference here
+                setStyle("-fx-background-color: red; "
+                       + "-fx-background-radius: 40px; "
+                       + "-fx-min-width: 40px; "
+                       + "-fx-min-height: 40px; "
+                       + "-fx-max-width: 40px; "
+                       + "-fx-max-height: 40px;");
+                isOn = true;                            // background color RED means the light is ON
             break;
                 
             case RED_OFF:   
                 setStyle("-fx-background-color: darkred; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = false;
+                isOn = false;                           // background color DARKRED means the light is OFF 
             break;
             
             case GREEN_ON:  
                 setStyle("-fx-background-color: lime; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = true;
+                isOn = true;                            // background color LIME means the light is ON
             break;
                 
             case GREEN_OFF: 
                 setStyle("-fx-background-color: green; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = false;
+                isOn = false;                           // background color GREEN means the light is OFF
             break;
                 
             case YELLOW_ON: 
                 setStyle("-fx-background-color: yellow; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = true;
+                isOn = true;                            // background color YELLOW means the light is ON
             break;
                 
             case YELLOW_OFF: 
                 setStyle("-fx-background-color: darkgoldenrod; -fx-background-radius: 40px; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;");
-                isOn = false;
+                isOn = false;                           // background color DARKGOLDENROD means the light is OFF
             break;
         }
     }
